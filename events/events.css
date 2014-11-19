@@ -64,6 +64,53 @@ html {
     position:absolute;
 }
 
+.slide {
+	width:75%;
+	height:auto;
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%, -50%);
+	z-index: 6;
+	text-align: center;
+	padding: 20px;
+	color: rgba(255,255,255,1);
+}
+
+.slide h2 {
+	font-size: 42px;
+	font-weight:700;
+	line-height: 44px
+}
+
+.slide p {
+	font-size: 42px;
+	font-weight: 300;
+	line-height: 44px;
+}
+
+.slide-1 {
+	left:-25%;
+	opacity:0.3;
+	-webkit-animation: slide1Animation 30s ease-in-out infinite;
+}
+
+.slide-2 {
+	-webkit-animation: slide2Animation 30s ease-in-out infinite;
+}
+
+.slide-3 {
+	left:125%;
+	opacity:0.3;
+	-webkit-animation: slide3Animation 30s ease-in-out infinite;
+}
+
+.slide-4 {
+	left:200%;
+	opacity: 0;
+	-webkit-animation: slide4Animation 30s ease-in-out infinite;
+}
+
 #logo {
     width:25%;
     height:10%;
@@ -100,6 +147,57 @@ html {
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-direction: alternate;
 }
+
+
+@-webkit-keyframes "slide1Animation" {
+ 20% {left:-25%;opacity:0.3;}
+ 25% {left:-100%; opacity:0.3;}
+ 40% {left:-100%;opacity:0}
+ 45% {left:200%;opacity:0}
+ 50% {left:125%;opacity:0.3}
+ 70% {left:125%;opacity:0.3;}
+ 75% {left:50%;opacity:1;}
+ 95% {left:50%;opacity:1;}
+ 100% {left:-25%;opacity:0.3;}
+}
+
+
+
+@-webkit-keyframes "slide2Animation" {
+ 20% {left:50%;opacity:1;}
+ 25% {left:-25%; opacity:0.3;}
+ 45% {left:-25%;opacity:0.3}
+ 50% {left:-100%;opacity:0.3}
+ 55% {left:-100%;opacity:0;}
+ 70% {left:200%;opacity:0;}
+ 75% {left:125%;opacity:0.3;}
+ 95% {left:125%;opacity:0.3;}
+ 100% {left:50%;opacity:1;}
+}
+
+@-webkit-keyframes "slide3Animation" {
+ 20% {left:125%;opacity:0.3;}
+ 25% {left:50%; opacity:1;}
+ 45% {left:50%;opacity:1}
+ 50% {left:-25%;opacity:0.3}
+ 70% {left:-25%;opacity:0.3;}
+ 75% {left:-125%;opacity:0;}
+ 80% {left:200%;opacity:0;}
+ 95% {left:200%;opacity:0.3;}
+ 100% {left:125%;opacity:0.3;}
+}
+
+@-webkit-keyframes "slide4Animation" {
+ 20% {left:200%;opacity:0.3;}
+ 25% {left:125%; opacity:0.3;}
+ 45% {left:125%;opacity:0.3}
+ 50% {left:50%;opacity:1}
+ 70% {left:50%;opacity:1;}
+ 75% {left:-25%;opacity:0.3;}
+ 95% {left:-25%;opacity:0.3;}
+ 100% {left:-100%;opacity:0;}
+}
+
 
 @-webkit-keyframes "slidein" {
  25% {
