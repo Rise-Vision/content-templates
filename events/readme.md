@@ -39,9 +39,20 @@ The zooming and panning are created using css keyframes and transforms and can b
 CSS and media queries are utilized to change the font size and styling depending on the display resolution which can be changed inside events.css style sheet by modifying the #title ID.
 
 ####Changing the text transition
-The transition for the events text was built using CSS keyframe animations. To modify, open the event.css file and located the keyframes for the slide you wish to modify. Each slide animation is controled by a separate keyframe animation that can be configured to any timing or position.
+The transition for the events text was built using CSS keyframe animations. To modify, open the event.css file and locate the keyframes for the specific slide you wish to modify. For example, these are the first keyframes for slide 1:
 
-To change the timing of the animations simply locate the slides classes in the CSS (currrently slide-1 to slide-4) and the line begining '-webkit-animation:'. Currently the time is set for 30s. You can also change the style of transition in the same line, currently set to 'ease-in-out'. Other options include 'linear' and 'ease-out'.
+```@-webkit-keyframes "slide1Animation" {
+ 20% {left:-25%;opacity:0.3;}
+ 25% {left:-100%; opacity:0.3;}
+ 40% {left:-100%;opacity:0}```
+
+Each slide animation is controled by a separate keyframe animation that can be configured to any timing, position and opacity that the display requires.
+
+To change the timing of the animations simply locate the slides classes in the CSS (currrently slide-1 to slide-4) and the line begining '-webkit-animation':
+
+```-webkit-animation: slide1Animation 30s ease-in-out infinite;```
+
+Currently the time is set for 30s. You can also change the style of transition in the same line, currently set to 'ease-in-out'. Other options include 'linear' and 'ease-out'.
 
 
 ####Changing the logo
