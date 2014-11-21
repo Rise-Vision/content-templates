@@ -7,10 +7,13 @@ html {
     -webkit-user-select: none;
 }
 
+body {
+	font-family: 'Oswald', sans-serif;
+}
+
 /* header text */
-#title {
-    font-family: 'Oswald', sans-serif;
-        background: -webkit-linear-gradient(top, rgba(254,255,255,0.2) 0%,rgba(255,255,255,0.7) 100%);
+#header {
+    background: -webkit-linear-gradient(top, rgba(254,255,255,0.2) 0%,rgba(255,255,255,0.7) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
@@ -25,34 +28,7 @@ html {
     position:absolute;
 } 
 	
-    /* 1280x850 */
-
-	@media only screen and (min-width: 1280px) {
-	    #title {
-			font-size: 144px;
-	    }
-	}
-	
-	/* 1360x768 */
-	@media only screen and (min-width: 1360px) {
-	    #title {
-			font-size: 150px;
-	    }
-	}
-	
-	/* 1920x1080*/
-	@media only screen and (min-width: 1920px) {	    
-        #title {
-			font-size: 190px;
-	    }
-	}
-	
-	/* 3840x2160 */
-	@media screen and (min-width: 2200px) {
-	    #title {
-			font-size: 380px;
-	    }
-	}
+    
 
 /* text transition - content */
 #content {
@@ -78,16 +54,69 @@ html {
 }
 
 .slide h2 {
-	font-size: 42px;
-	font-weight:700;
-	line-height: 44px
+	font-size: 50px;
+	font-weight:bold;
+	line-height: 1.2em
 }
 
 .slide p {
 	font-size: 42px;
 	font-weight: 300;
-	line-height: 44px;
+	line-height: 1.2em
 }
+
+    /* 1280x850 */
+
+	@media only screen and (min-width: 1280px) {
+	    #header {
+			font-size: 144px;
+	    }
+	}
+	
+	/* 1360x768 */
+	@media only screen and (min-width: 1360px) {
+	    #header {
+			font-size: 150px;
+	    }
+
+	    .slide h2 {
+	    	font-size: 60px;
+	    }
+
+	    .slide p {
+	    	font-size: 52px;
+	    }
+	}
+	
+	/* 1920x1080*/
+	@media only screen and (min-width: 1920px) {	    
+        #header {
+			font-size: 190px;
+	    }
+
+	    .slide h2 {
+	    	font-size: 90px;
+	    }
+
+	    .slide p {
+	    	font-size: 80px;
+	    }
+	}
+	
+	/* 3840x2160 */
+	@media screen and (min-width: 2200px) {
+	    #header {
+			font-size: 380px;
+	    }
+
+	    .slide h2 {
+	    	font-size: 180px;
+	    }
+
+	    .slide p {
+	    	font-size: 160px;
+	    }
+	}
 
 .slide-1 {
 	left:-25%;
@@ -148,6 +177,7 @@ html {
 	-webkit-animation-direction: alternate;
 }
 
+/*Keyframe animation for slide 1*/
 
 @-webkit-keyframes "slide1Animation" {
  20% {left:-25%;opacity:0.3;}
@@ -161,7 +191,7 @@ html {
  100% {left:-25%;opacity:0.3;}
 }
 
-
+/*Keyframe animation for slide 2*/
 
 @-webkit-keyframes "slide2Animation" {
  20% {left:50%;opacity:1;}
@@ -175,6 +205,8 @@ html {
  100% {left:50%;opacity:1;}
 }
 
+/*Keyframe animation for slide 3*/
+
 @-webkit-keyframes "slide3Animation" {
  20% {left:125%;opacity:0.3;}
  25% {left:50%; opacity:1;}
@@ -186,6 +218,8 @@ html {
  95% {left:200%;opacity:0.3;}
  100% {left:125%;opacity:0.3;}
 }
+
+/*Keyframe animation for slide 4*/
 
 @-webkit-keyframes "slide4Animation" {
  20% {left:200%;opacity:0.3;}
