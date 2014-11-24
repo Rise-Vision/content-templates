@@ -1,0 +1,156 @@
+/* USER CONTAINER (Image Username @Mention) */
+.user a {
+    position: absolute;
+    top:0%;
+    left:10%;
+    width: 50%;
+	
+}
+/* USER Image */
+.user img { 
+    position: absolute;
+    top:0%;
+    left:0%;
+    width:0px;
+    margin-left: -20%;
+	margin-top: 2%;
+	padding: 80px;
+	background-image: url("https://pbs.twimg.com/profile_images/535530161349742592/gs3LfUGE.png");
+	background-size: 160px 160px;
+}
+
+/* User High Res Image*/
+.user-highres img{
+    position: absolute;
+    top:10%;
+    left:5%;
+    width:13%;
+    z-index: 9;
+}
+
+/* USER Username */
+.user span span {
+	font-family: 'Russo One', sans-serif;
+	position: absolute;
+	left:-46%;
+	width: 100%;
+	font-size: 50px;
+	color:white;
+}
+
+/* USER @ Mention */
+.user a > span {
+    position: absolute;
+    top:0%;
+    left:60%;
+    width:100%;
+    margin-top:3%;
+    font-size: 30px;
+    line-height: 60px;
+	color:white;
+}
+
+/* TIME */
+.timePosted {
+    position: absolute;
+	margin:10px 0 0 0;
+    width:40%;
+    top:3%;
+    right:0%;
+    text-align: right;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    line-height: 60px;
+}
+
+/* TWEET */
+.tweet {
+	position: absolute;
+	width:80%;
+	top:5%;
+	left:17%;
+	font-size:60px;
+}
+
+/* TWEET Mentions and Hastags*/
+.tweet a {
+	color:#EF3F48;
+	text-decoration:none;
+}
+
+/* MEDIA Queries */
+@media only screen and (max-width: 1270px) {
+	.user img { 
+		padding: 56px;
+		background-size: 112px 112px;
+	}
+
+	.user span span {
+		font-size: 35px;
+	}
+
+	.user a > span {
+		font-size: 21px;
+		line-height: 42px;
+	}
+
+	.timePosted {
+		font-size: 21px;
+		line-height: 42px;
+	}
+
+	.tweet {
+		font-size:42px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	.user img { 
+		padding: 112px;
+		background-size: 224px 224px;
+	}
+
+	.user span span {
+		font-size: 70px;
+	}
+
+	.user a > span {
+		font-size: 42px;
+		line-height: 84px;
+	}
+
+	.timePosted {
+		font-size: 42px;
+		line-height: 84px;
+	}
+
+	.tweet {
+		font-size:84px;
+	}
+}
+
+@media only screen and (min-width: 3840px) {
+	.user img { 
+		padding: 224px;
+		background-size: 448px 448px;
+	}
+
+	.user span span {
+		font-size: 140px;
+	}
+
+	.user a > span {
+		font-size: 84px;
+		line-height: 168px;
+	}
+
+	.timePosted {
+		font-size: 84px;
+		line-height: 168px;
+	}
+
+	.tweet {
+		font-size:168px;
+	}
+}
+	
