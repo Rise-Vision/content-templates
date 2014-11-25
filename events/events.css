@@ -7,10 +7,13 @@ html {
     -webkit-user-select: none;
 }
 
+body {
+	font-family: 'Oswald', sans-serif;
+}
+
 /* header text */
-#title {
-    font-family: 'Oswald', sans-serif;
-        background: -webkit-linear-gradient(top, rgba(254,255,255,0.2) 0%,rgba(255,255,255,0.7) 100%);
+#header {
+    background: -webkit-linear-gradient(top, rgba(254,255,255,0.2) 0%,rgba(255,255,255,0.7) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
@@ -25,34 +28,7 @@ html {
     position:absolute;
 } 
 	
-    /* 1280x850 */
-
-	@media only screen and (min-width: 1280px) {
-	    #title {
-			font-size: 144px;
-	    }
-	}
-	
-	/* 1360x768 */
-	@media only screen and (min-width: 1360px) {
-	    #title {
-			font-size: 150px;
-	    }
-	}
-	
-	/* 1920x1080*/
-	@media only screen and (min-width: 1920px) {	    
-        #title {
-			font-size: 190px;
-	    }
-	}
-	
-	/* 3840x2160 */
-	@media screen and (min-width: 2200px) {
-	    #title {
-			font-size: 380px;
-	    }
-	}
+    
 
 /* text transition - content */
 #content {
@@ -62,6 +38,106 @@ html {
     top:30.0839%;
     z-index:3;
     position:absolute;
+}
+
+.slide {
+	width:75%;
+	height:auto;
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%, -50%);
+	z-index: 6;
+	text-align: center;
+	padding: 20px;
+	color: rgba(255,255,255,1);
+}
+
+.slide h2 {
+	font-size: 50px;
+	font-weight:bold;
+	line-height: 1.2em
+}
+
+.slide p {
+	font-size: 42px;
+	font-weight: 300;
+	line-height: 1.2em
+}
+
+    /* 1280x850 */
+
+	@media only screen and (min-width: 1280px) {
+	    #header {
+			font-size: 144px;
+	    }
+	}
+	
+	/* 1360x768 */
+	@media only screen and (min-width: 1360px) {
+	    #header {
+			font-size: 150px;
+	    }
+
+	    .slide h2 {
+	    	font-size: 60px;
+	    }
+
+	    .slide p {
+	    	font-size: 52px;
+	    }
+	}
+	
+	/* 1920x1080*/
+	@media only screen and (min-width: 1920px) {	    
+        #header {
+			font-size: 190px;
+	    }
+
+	    .slide h2 {
+	    	font-size: 90px;
+	    }
+
+	    .slide p {
+	    	font-size: 80px;
+	    }
+	}
+	
+	/* 3840x2160 */
+	@media screen and (min-width: 2200px) {
+	    #header {
+			font-size: 380px;
+	    }
+
+	    .slide h2 {
+	    	font-size: 180px;
+	    }
+
+	    .slide p {
+	    	font-size: 160px;
+	    }
+	}
+
+.slide-1 {
+	left:-25%;
+	opacity:0.3;
+	-webkit-animation: slide1Animation 30s ease-in-out infinite;
+}
+
+.slide-2 {
+	-webkit-animation: slide2Animation 30s ease-in-out infinite;
+}
+
+.slide-3 {
+	left:125%;
+	opacity:0.3;
+	-webkit-animation: slide3Animation 30s ease-in-out infinite;
+}
+
+.slide-4 {
+	left:200%;
+	opacity: 0;
+	-webkit-animation: slide4Animation 30s ease-in-out infinite;
 }
 
 #logo {
@@ -100,6 +176,62 @@ html {
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-direction: alternate;
 }
+
+/*Keyframe animation for slide 1*/
+
+@-webkit-keyframes "slide1Animation" {
+ 20% {left:-25%;opacity:0.3;}
+ 25% {left:-100%; opacity:0.3;}
+ 40% {left:-100%;opacity:0}
+ 45% {left:200%;opacity:0}
+ 50% {left:125%;opacity:0.3}
+ 70% {left:125%;opacity:0.3;}
+ 75% {left:50%;opacity:1;}
+ 95% {left:50%;opacity:1;}
+ 100% {left:-25%;opacity:0.3;}
+}
+
+/*Keyframe animation for slide 2*/
+
+@-webkit-keyframes "slide2Animation" {
+ 20% {left:50%;opacity:1;}
+ 25% {left:-25%; opacity:0.3;}
+ 45% {left:-25%;opacity:0.3}
+ 50% {left:-100%;opacity:0.3}
+ 55% {left:-100%;opacity:0;}
+ 70% {left:200%;opacity:0;}
+ 75% {left:125%;opacity:0.3;}
+ 95% {left:125%;opacity:0.3;}
+ 100% {left:50%;opacity:1;}
+}
+
+/*Keyframe animation for slide 3*/
+
+@-webkit-keyframes "slide3Animation" {
+ 20% {left:125%;opacity:0.3;}
+ 25% {left:50%; opacity:1;}
+ 45% {left:50%;opacity:1}
+ 50% {left:-25%;opacity:0.3}
+ 70% {left:-25%;opacity:0.3;}
+ 75% {left:-125%;opacity:0;}
+ 80% {left:200%;opacity:0;}
+ 95% {left:200%;opacity:0.3;}
+ 100% {left:125%;opacity:0.3;}
+}
+
+/*Keyframe animation for slide 4*/
+
+@-webkit-keyframes "slide4Animation" {
+ 20% {left:200%;opacity:0.3;}
+ 25% {left:125%; opacity:0.3;}
+ 45% {left:125%;opacity:0.3}
+ 50% {left:50%;opacity:1}
+ 70% {left:50%;opacity:1;}
+ 75% {left:-25%;opacity:0.3;}
+ 95% {left:-25%;opacity:0.3;}
+ 100% {left:-100%;opacity:0;}
+}
+
 
 @-webkit-keyframes "slidein" {
  25% {
