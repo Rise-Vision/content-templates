@@ -27,6 +27,8 @@ body {
     z-index:4;
     position:absolute;
 } 
+
+
 	
     
 
@@ -40,7 +42,7 @@ body {
     position:absolute;
 }
 
-.slide {
+.slides {
 	width:75%;
 	height:auto;
 	position: absolute;
@@ -51,19 +53,47 @@ body {
 	text-align: center;
 	padding: 20px;
 	color: rgba(255,255,255,1);
+	-webkit-transform:translate(-50%, -50%);
+	-webkit-animation: slide2Animation 30s ease-in-out infinite;
 }
 
-.slide h2 {
+.slides h2 {
 	font-family: 'Oswald', sans-serif; 
 	font-size: 50px;
 	font-weight:bold;
 	line-height: 1.2em;
 }
 
-.slide p {
+.slides p {
 	font-size: 42px;
 	font-weight: 300;
 	line-height: 1.2em;
+	opacity:1;
+}
+
+/*Slide starting position at right hand side*/
+
+.slides:first-of-type {
+	left:125%;
+	opacity:0.3;
+	-webkit-animation: slide3Animation 30s ease-in-out infinite;
+}
+
+/*Slide starting position at left hand side*/
+
+.slides:nth-of-type(3n) {
+	left:-25%;
+	opacity: 0.3;
+	-webkit-animation: slide1Animation 30s ease-in-out infinite;
+}
+/*.slides:nth-of-type(4n) {
+}*/
+
+/*Slide starting position off screen*/
+
+.slides:last-of-type {
+	left:200%;
+	-webkit-animation: slide4Animation 30s ease-in-out infinite;	
 }
 
     /* 1280x850 */
@@ -72,11 +102,11 @@ body {
 	    #header {
 			font-size: 144px;
 	    }
-		.slide h2 {
+		.slides h2 {
 	    	font-size: 60px;
 	    }
 
-	    .slide p {
+	    .slides p {
 	    	font-size: 52px;
 	    }
 	}
@@ -87,11 +117,11 @@ body {
 			font-size: 150px;
 	    }
 
-	    .slide h2 {
+	    .slides h2 {
 	    	font-size: 60px;
 	    }
 
-	    .slide p {
+	    .slides p {
 	    	font-size: 52px;
 	    }
 	}
@@ -102,11 +132,11 @@ body {
 			font-size: 190px;
 	    }
 
-	    .slide h2 {
+	    .slides h2 {
 	    	font-size: 90px;
 	    }
 
-	    .slide p {
+	    .slides p {
 	    	font-size: 80px;
 	    }
 	}
@@ -117,36 +147,15 @@ body {
 			font-size: 380px;
 	    }
 
-	    .slide h2 {
+	    .slides h2 {
 	    	font-size: 180px;
 	    }
 
-	    .slide p {
+	    .slides p {
 	    	font-size: 160px;
 	    }
 	}
 
-.slide-1 {
-	left:-25%;
-	opacity:0.3;
-	-webkit-animation: slide1Animation 30s ease-in-out infinite;
-}
-
-.slide-2 {
-	-webkit-animation: slide2Animation 30s ease-in-out infinite;
-}
-
-.slide-3 {
-	left:125%;
-	opacity:0.3;
-	-webkit-animation: slide3Animation 30s ease-in-out infinite;
-}
-
-.slide-4 {
-	left:200%;
-	opacity: 0;
-	-webkit-animation: slide4Animation 30s ease-in-out infinite;
-}
 
 #logo {
     width:25%;

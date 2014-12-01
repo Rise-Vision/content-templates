@@ -1,0 +1,23 @@
+{
+  "name": "webCompTest2",
+  "version": "0.0.0",
+  "authors": [
+    "pcsandford <petersandford1982@gmail.com>"
+  ],
+  "description": "testing google sheets web component",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.1",
+    "google-apis": "GoogleWebComponents/google-apis#~0.4.2",
+    "google-map": "GoogleWebComponents/google-map#~0.4.0",
+    "google-sheets": "GoogleWebComponents/google-sheets#~0.0.4",
+    "google-signin": "GoogleWebComponents/google-signin#~0.2.0"
+  }
+}
