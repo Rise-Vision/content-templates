@@ -2,8 +2,6 @@ $(document).ready(function(){
 
 var sheet = document.querySelector('#sheet');
 
-console.log('running');
-
 sheet.addEventListener('google-sheet-data', function(e) {
   switch (e.detail.type) {
     case 'rows':
@@ -11,9 +9,6 @@ sheet.addEventListener('google-sheet-data', function(e) {
     break;
     default:
     break;
-
-      console.log(this);
-
   }
 });
 
