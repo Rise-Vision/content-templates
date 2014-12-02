@@ -36,46 +36,62 @@
 <link href='http://fonts.googleapis.com/css?family=Oswald:700,300' rel='stylesheet' type='text/css'>
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-	</head>
+<!--Web Components-->    
+<script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+<link rel="import" href="bower_components/google-sheets/google-sheets.html">
+<link rel="import" href="bower_components/polymer/polymer.html">
 
-<body id="gradient">
+    </head>
 
- 	<!--Background Animation-->
+<body id="gradient" unresolved>
+
+    <!--Background Animation-->
     <div id="background">
         <img src="images/background-buildings-1920.jpg">
     </div>
+
+    <!-- Published Spreadsheet Details -->
+<google-sheets id="sheet" 
+               key="1WwSkJbyIH4EgVDni9eI65zK95MBv0R5c6JSVXsGEPiE"
+               gid="0"
+               rows="{{rows}}"
+               published>
+</google-sheets>
     
-    <!--Header-->      
-    <div id="header">UPCOMING EVENTS</div>
-     
-    <!--Text Transition-->  
-    <div  id="content">
-    <!--slide 1-->
-    <div class="slide slide-1">
-        <h2 class="title">June 12, 2014 - 7:00pm<br>Speaker: Dr. James J. Heiman</h2>
-        <p class="details">Author and professor, Dr. James J. Heiman will provide us with a first hand account of Kansas City's experience of World War I.</p>
-    </div>
-    <!--slide 2-->
-    <div class="slide slide-2">
-        <h2 class="title">July 3, 2014 - 8:00pm<br>Summer Community Days</h2>
-        <p class="details">Residents celebrate Community Days each year around the 4th of July with a pancake feed, parade through Old Down Town, and fireworks.</p>
-    </div>
-    <!--slide 3-->
-    <div class="slide slide-3">
-        <h2 class="title">June 12, 2014 - 7:00pm<br>Guest Speaker: Dr. James J. Heiman</h2>
-        <p class="details">Author and professor, Dr. James J. Heiman will provide us with a first hand account of Kansas City's experience of World War I.</p>
-    </div>
-    <!--slide 4-->
-       <div class="slide slide-4">
-           <h2 class="title">September 7, 2014 - 7:00pm<br>Teacher Appreciation Night</h2>
-           <p class="details">Kick off the new school year in style! Join the town hall for an exclusive evening celebrating educators of all stripes.</p>
-       </div>     
-    </div>
-    <!--Logo-->      
-    <div  id="logo">
-    	<img src="images/sample-logo.png"/>
-    </div>
+<!--Header-->      
+<div id="header">UPCOMING EVENTS</div>
+ 
+<!--Text Transition-->  
+<div  id="content">
+
+<!--Information collected from google sheet-->
+    <main layout horizontal>
+
+
+         <section>
+
+             <template id="rows" bind>
+
+<!-- Information from Spreadsheet Rows -->
+                <template repeat="{{rows}}">
+                    <div class="slides">
+                        <h2 class="date">{{gsx$date.$t}}</h2>
+                        <h2 class="event">{{gsx$event.$t}}</h2>
+                        <p class="desc">{{gsx$description.$t}}</p>
+                    </div>
+                 </template>
+            </template>
+
+        </section>
+
+    </main>
+</div>
     
+<!--Logo-->      
+<div  id="logo">
+    <img src="images/sample-logo.png"/>
+</div>
+
 <!--Footer Icons-->   
 <!--Github Icon-->
 <div id="github">
@@ -87,4 +103,6 @@
     <a href="http://www.risevision.com/" target="_blank"><img id="risebtn" src="images/rise-icon.png"/></a>
 </div>
 </body> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="script.js"></script>
 </html>
