@@ -1,0 +1,20 @@
+{
+  "name": "Events Template",
+  "version": "0.1.0",
+  "authors": [
+    "pcsandford <peter@cameroncodes.com>"
+  ],
+  "description": "Events template built using the google-sheets web component",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.1",
+    "google-sheets": "GoogleWebComponents/google-sheets#~0.0.4",
+  }
+}
