@@ -39,13 +39,18 @@
 </head>
 
 <body id="gradient">
+
   <!--Background Animation-->
   <div id="background">
-    <img src="//localhost/wordpress/wp-content/uploads/2016/12/background-buildings-1920.jpg">
+    <video width="1920" height="1080" autoplay loop>
+      <source src="http://localhost:8888/events/wp-content/uploads/2016/12/clouds2.webm" type="video/webm">
+      <source src="movie.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+    </video>
   </div>
 
   <!--Header-->
-  <div id="header">UPCOMING EVENTS</div>
+  <div id="header"><!--<img id="risebtn" src="http://localhost:8888/events/wp-content/uploads/2016/12/rise-icon.png"/>-->RISE VISION</div>
 
   <!--Text Transition-->
   <div id="content">
@@ -53,8 +58,8 @@
       <section>
         <template id="events">
           <div class="slides">
-            <h2 class="date"></h2>
-            <h2 class="event"></h2>
+          <h2 class="event"></h2>
+            <p class="date"></p>
             <div class="desc"></div>
           </div>
         </template>
@@ -63,24 +68,24 @@
   </div>
 
   <!--Logo-->
-  <div id="logo">
-    <img src="//localhost/wordpress/wp-content/uploads/2016/12/sample-logo.png"/>
-  </div>
+  <!--<div id="logo">
+    <img src="http://localhost:8888/events/wp-content/uploads/2016/12/sample-logo.png"/>
+  </div>-->
 
   <!--Footer Icons-->
   <!--Github Icon-->
-  <div id="github">
+  <!--<div id="github">
     <a type="button" id="gitbtn" href="http://github.com/Rise-Vision/content-templates/tree/master/events" target="_blank">
       Contribute <i class="fa fa-github fa-lg "></i>
     </a>
-  </div>
+  </div>-->
 
   <!--Rise Icon-->
-  <div id="rise">
+  <!--<div id="rise">
     <a href="http://www.risevision.com/" target="_blank">
-      <img id="risebtn" src="//localhost/wordpress/wp-content/uploads/2016/12/rise-icon.png"/>
+      <img id="risebtn" src="http://localhost:8888/events/wp-content/uploads/2016/12/rise-icon.png"/>
     </a>
-  </div>
+  </div>-->
 
   <script src="script.js"></script>
 </body>

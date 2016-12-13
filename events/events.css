@@ -13,17 +13,18 @@ body {
 
 /* header text */
 #header {
-    background: -webkit-linear-gradient(top, rgba(254,255,255,0.2) 0%,rgba(255,255,255,0.7) 100%);
+    background: -webkit-linear-gradient(top, rgba(245,255,247,0.8) 0%,rgba(74,182,103,0.8) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
-    font-size: 144px;
+    font-size: 96px;
+    color:red;
     font-weight: bold;
     letter-spacing: 3px;
     width:100%;
-    height:30%;
+    height:200px;
     left:0%;
-    top:3.5%;
+    top:0px;
     z-index:4;
     position:absolute;
 }   
@@ -37,6 +38,24 @@ body {
     z-index:3;
     position:absolute;
 	-webkit-transform: translateZ(0);
+}
+
+.date {
+color:#4ab667;
+font-size:40px;
+font-weight:700;
+}
+
+.desc {
+	font-size:36px;
+
+
+}
+
+.event {
+	text-transform: uppercase;
+	font-size:56px;
+	font-family: 'Oswald', sans-serif;
 }
 
 .slides {
@@ -55,16 +74,11 @@ body {
 }
 
 .slides h2 {
-	font-family: 'Oswald', sans-serif; 
-	font-size: 50px;
-	font-weight:bold;
-	line-height: 1.2em;
+
 }
 
 .slides p {
-	font-size: 42px;
-	font-weight: 300;
-	line-height: 1.2em;
+
 	opacity:1;
 }
 
@@ -72,7 +86,7 @@ body {
 
 .slides:first-of-type {
 	left:125%;
-	opacity:0.3;
+	opacity:0;
 	-webkit-animation: slide3Animation 30s ease-in-out infinite;
 	-webkit-perspective: 1000;
 }
@@ -81,7 +95,7 @@ body {
 
 .slides:nth-of-type(3n) {
 	left:-25%;
-	opacity: 0.3;
+	opacity: 0;
 	-webkit-animation: slide1Animation 30s ease-in-out infinite;
 	-webkit-perspective: 1000;
 	
@@ -99,63 +113,8 @@ body {
 
     /* 1280x850 */
 
-	@media only screen and (min-width: 1280px) {
-	    #header {
-			font-size: 144px;
-	    }
-		.slides h2 {
-	    	font-size: 60px;
-	    }
-
-	    .slides p {
-	    	font-size: 52px;
-	    }
-	}
 	
-	/* 1360x768 */
-	@media only screen and (min-width: 1360px) {
-	    #header {
-			font-size: 150px;
-	    }
-
-	    .slides h2 {
-	    	font-size: 60px;
-	    }
-
-	    .slides p {
-	    	font-size: 52px;
-	    }
-	}
 	
-	/* 1920x1080*/
-	@media only screen and (min-width: 1920px) {	    
-        #header {
-			font-size: 190px;
-	    }
-
-	    .slides h2 {
-	    	font-size: 90px;
-	    }
-
-	    .slides p {
-	    	font-size: 80px;
-	    }
-	}
-	
-	/* 3840x2160 */
-	@media screen and (min-width: 2200px) {
-	    #header {
-			font-size: 380px;
-	    }
-
-	    .slides h2 {
-	    	font-size: 180px;
-	    }
-
-	    .slides p {
-	    	font-size: 160px;
-	    }
-	}
 
 
 #logo {
@@ -178,19 +137,21 @@ body {
     width:100%;
     margin:0;
     overflow:hidden;
-    background-size:contain; 
+    background-size:contain;
+    background: -webkit-linear-gradient(top, #222 0%,#000 100%); 
 }
 
 #background {
 	overflow: hidden;
 	position: relative;
 	text-align: center;
+	opacity: .4;
 }
 
 #background img {
     min-width:100%;
 	-webkit-animation-duration: 275s;
-    -webkit-animation-name: slidein;
+    /*-webkit-animation-name: slidein;*/
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-direction: alternate;
 }
@@ -198,55 +159,55 @@ body {
 /*Keyframe animation for slide 1*/
 
 @-webkit-keyframes "slide1Animation" {
- 20% {left:-25%;opacity:0.2;}
- 25% {left:-100%; opacity:0.2;}
+ 20% {left:-25%;opacity:0;}
+ 25% {left:-100%; opacity:0;}
  40% {left:-100%;opacity:0}
  45% {left:200%;opacity:0}
- 50% {left:125%;opacity:0.2;}
- 70% {left:125%;opacity:0.2;}
+ 50% {left:125%;opacity:0;}
+ 70% {left:125%;opacity:0;}
  75% {left:50%;opacity:1;}
  95% {left:50%;opacity:1;}
- 100% {left:-25%;opacity:0.2;}
+ 100% {left:-25%;opacity:0;}
 }
 
 /*Keyframe animation for slide 2*/
 
 @-webkit-keyframes "slide2Animation" {
  20% {left:50%;opacity:1;}
- 25% {left:-25%; opacity:0.2;}
- 45% {left:-25%;opacity:0.2;}
- 50% {left:-100%;opacity:0.2;}
+ 25% {left:-25%; opacity:0;}
+ 45% {left:-25%;opacity:0;}
+ 50% {left:-100%;opacity:0;}
  55% {left:-100%;opacity:0;}
  70% {left:200%;opacity:0;}
- 75% {left:125%;opacity:0.2;}
- 95% {left:125%;opacity:0.2;}
+ 75% {left:125%;opacity:0;}
+ 95% {left:125%;opacity:0;}
  100% {left:50%;opacity:1;}
 }
 
 /*Keyframe animation for slide 3*/
 
 @-webkit-keyframes "slide3Animation" {
- 20% {left:125%;opacity:0.2;}
+ 20% {left:125%;opacity:0;}
  25% {left:50%; opacity:1;}
  45% {left:50%;opacity:1;}
- 50% {left:-25%;opacity:0.2;}
- 70% {left:-25%;opacity:0.2;}
+ 50% {left:-25%;opacity:0;}
+ 70% {left:-25%;opacity:0;}
  75% {left:-125%;opacity:0;}
  80% {left:200%;opacity:0;}
- 95% {left:200%;opacity:0.2;}
- 100% {left:125%;opacity:0.2;}
+ 95% {left:200%;opacity:0;}
+ 100% {left:125%;opacity:0;}
 }
 
 /*Keyframe animation for slide 4*/
 
 @-webkit-keyframes "slide4Animation" {
- 20% {left:200%;opacity:0.2;}
- 25% {left:125%; opacity:0.2;}
- 45% {left:125%;opacity:0.2;}
+ 20% {left:200%;opacity:0;}
+ 25% {left:125%; opacity:0;}
+ 45% {left:125%;opacity:0;}
  50% {left:50%;opacity:1}
  70% {left:50%;opacity:1;}
- 75% {left:-25%;opacity:0.2;}
- 95% {left:-25%;opacity:0.2;}
+ 75% {left:-25%;opacity:0;}
+ 95% {left:-25%;opacity:0;}
  100% {left:-100%;opacity:0;}
 }
 
@@ -327,6 +288,9 @@ body {
 }
 
 #risebtn {
-    width:auto; 
-    height:100%;   
+	position: relative;
+	width:200px;
+    height:200px;  
 }
+
+

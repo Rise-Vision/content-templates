@@ -28,6 +28,6 @@
   }
 
   httpRequest.onreadystatechange = addSlides;
-  httpRequest.open( "GET", "http://localhost/wordpress/wp-json/wp/v2/pages?parent=8742" );
+  httpRequest.open( "GET", "http://localhost:8888/events/wp-json/wp/v2/pages?parent=5" );
   httpRequest.send();
 } )();
